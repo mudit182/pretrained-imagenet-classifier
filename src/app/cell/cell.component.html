@@ -1,0 +1,20 @@
+
+<div class="cell" fxLayout="row" fxLayoutAlign="start start" (click)="predict()">
+  <div class="image-container">
+    <img [src]="getImagePath()" #imageSelector class="image" alt="sample image">
+  </div>
+  <div *ngIf="predictions.length > 0" class="predictions-holder"
+    fxLayout="column" fxLayoutAlign="center">
+    <ul>
+      <li *ngFor="let prediction of predictions" class="prediction"
+        fxLayout="row" fxLayoutAlign="start center">
+        <p fxFlex="0 0 30px" class="prediction-prob">
+          {{ prediction.prob * 100 | number : '1.1-1' }}%
+        </p>
+        <p class="prediction-class">
+          {{ prediction.class | titlecase }}
+        </p>
+      </li>
+    </ul>
+  </div>
+</div>

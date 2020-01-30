@@ -1,1 +1,11 @@
 /* You can add global styles to this file, and also import other style files */
+@import 'normalize';
+
+
+.g-page {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  background: rgb(240, 240, 240);
+  overflow: hidden;
+}

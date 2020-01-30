@@ -1,0 +1,51 @@
+
+.cell {
+  position: relative;
+  height: 150px;
+  margin: 10px;
+  background: white;
+  cursor: pointer;
+  box-shadow: 4px 4px 6px 2px rgba(0, 0, 0, 0.7);
+}
+.cell:hover {
+  box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.6);
+}
+.cell:active {
+  box-shadow: none;
+}
+
+.image-container {
+  position: relative;
+  height: 100%;
+}
+
+.image {
+  height: 100%;
+  object-fit: contain;
+}
+
+.predictions-holder {
+  max-width: 150px;
+  height: 100%;
+  padding: 5px;
+  overflow: scroll;
+}
+
+.prediction {
+  margin: 15px 0px;
+}
+
+
+.prediction-prob {
+  text-align: end;
+  font-weight: bold;
+  font-size: 10px;
+}
+
+.prediction-class {
+  white-space: nowrap;
+  margin-left: 5px;
+  font-size: 14px;
+  overflow: scroll;
+}
+
