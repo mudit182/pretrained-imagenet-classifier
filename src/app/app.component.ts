@@ -1,21 +1,13 @@
-import { Component, OnInit } from '@angular/core';
-import { ClassificationService } from './ml/classification.service';
+import { Component } from '@angular/core';
+
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
-export class AppComponent implements OnInit {
-  images: string[] = [];
+export class AppComponent {
 
-  constructor(private classificationService: ClassificationService) {}
-
-  ngOnInit() {
-    for (let index = 1; index < 33; index++) {
-      this.images.push(index + '.jpg');
-    }
-    this.classificationService.loadModel();
-  }
+  constructor() {}
 
 }

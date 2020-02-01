@@ -10,7 +10,7 @@ export class CellComponent implements OnInit {
   @Input() image: string;
   @ViewChild('imageSelector', {static: false}) imageEl: ElementRef;
 
-  predictions: {class: string, prob: number}[] = [];
+  predictions: {className: string, probability: number}[] = [];
 
   constructor(private classificationService: ClassificationService) { }
 
@@ -21,9 +21,9 @@ export class CellComponent implements OnInit {
     return 'assets/test_images/' + this.image;
   }
 
-  predict() {
+  async predict() {
     if (this.predictions.length === 0) {
-      this.predictions = this.classificationService.predict(this.imageEl.nativeElement);
+      this.predictions = await this.classificationService.predict(this.imageEl.nativeElement);
     }
   }
 
